@@ -1,6 +1,6 @@
 name: lumide_jaspr
 description: Jaspr extension for Lumide
-version: 0.1.0
+version: 0.1.1
 homepage: https://lumide.dev
 repository: https://github.com/optiflowx/lumide_jaspr
 
@@ -13,8 +13,6 @@ executables:
 
 environment:
   sdk: '>=3.12.1 <4.0.0'
-
-resolution: workspace
 
 dependencies:
   lumide_api: ^1.8.0

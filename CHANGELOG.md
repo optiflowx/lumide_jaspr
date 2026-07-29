@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Remove `resolution: workspace` so the package installs cleanly from pub.dev / Lumide Marketplace
+
 ## 0.1.0
 
 - Initial Lumide Jaspr plugin
