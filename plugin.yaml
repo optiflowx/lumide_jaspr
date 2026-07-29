@@ -1,0 +1,58 @@
+id: lumide_jaspr
+name: 'Jaspr'
+description: 'Jaspr web framework support for Lumide IDE'
+entry_point: 'bin/main.dart'
+
+activation_events:
+  - 'workspaceContains:pubspec.yaml'
+
+permissions:
+  - fileSystem:
+      - '${workspace}/**'
+  - shell:
+      - jaspr
+      - dart
+      - which
+      - where
+
+configuration:
+  - key: jaspr.logEntryLimit
+    type: number
+    default: 5000
+    title: 'Log Entry Limit'
+    description: 'Maximum number of log entries to keep in the Jaspr output channel.'
+
+contributes:
+  commands:
+    - id: jaspr.doctor
+      title: 'Jaspr: Doctor'
+      category: 'Jaspr'
+    - id: jaspr.clean
+      title: 'Jaspr: Clean'
+      category: 'Jaspr'
+    - id: jaspr.create
+      title: 'Jaspr: New Project'
+      category: 'Jaspr'
+    - id: jaspr.serve
+      title: 'Jaspr: Serve'
+      category: 'Jaspr'
+    - id: jaspr.stop
+      title: 'Jaspr: Stop'
+      category: 'Jaspr'
+    - id: jaspr.debug
+      title: 'Jaspr: Debug'
+      category: 'Jaspr'
+    - id: jaspr.tools
+      title: 'Jaspr: Tools Menu'
+      category: 'Jaspr'
+    - id: jaspr.context.clean
+      title: 'Jaspr: Clean Here'
+      category: 'Jaspr'
+    - id: jaspr.context.doctor
+      title: 'Jaspr: Doctor Here'
+      category: 'Jaspr'
+    - id: jaspr.context.create
+      title: 'Jaspr: New Project Here'
+      category: 'Jaspr'
+  fileNesting:
+    'pubspec.yaml': 'pubspec.lock, pubspec_overrides.yaml'

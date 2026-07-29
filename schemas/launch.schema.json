@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lumide Jaspr Launch Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "cwd": {
+      "type": "string",
+      "title": "Working directory",
+      "description": "Directory where the Jaspr daemon runs. Leave empty to use the project root."
+    },
+    "args": {
+      "type": "array",
+      "title": "Daemon arguments",
+      "description": "Arguments forwarded to `jaspr daemon`. Enter one argument per line.",
+      "items": { "type": "string" }
+    },
+    "env": {
+      "type": "object",
+      "title": "Environment variables",
+      "description": "Environment variables for the launched process. Enter one KEY=VALUE pair per line.",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

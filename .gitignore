@@ -1,0 +1,7 @@
+# https://dart.dev/tools/private-files
+.dart_tool/
+.packages
+build/
+pubspec.lock
+*.iml
+.idea/
