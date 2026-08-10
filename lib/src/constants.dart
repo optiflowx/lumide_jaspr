@@ -9,6 +9,7 @@ const String cmdJasprTools = 'jaspr.tools';
 const String cmdJasprCleanForContext = 'jaspr.context.clean';
 const String cmdJasprDoctorForContext = 'jaspr.context.doctor';
 const String cmdJasprCreateForContext = 'jaspr.context.create';
+const String cmdJasprEnsureImports = 'jaspr.ensureImports';
 
 const String launchProviderJaspr = 'jaspr';
 const String launchConfigCurrent = 'current';
@@ -16,6 +17,10 @@ const String launchConfigCurrent = 'current';
 // configuration
 const String confLogEntryLimit = 'jaspr.logEntryLimit';
 const int defaultLogEntryLimit = 5000;
+const String confAutoImportOnSave = 'jaspr.autoImportOnSave';
+const bool defaultAutoImportOnSave = true;
+const String confRemoveUnusedImportsOnSave = 'jaspr.removeUnusedImportsOnSave';
+const bool defaultRemoveUnusedImportsOnSave = true;
 
 // output
 const String channelJaspr = 'Jaspr';
