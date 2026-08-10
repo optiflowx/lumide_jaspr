@@ -1,4 +1,6 @@
 export 'package:lumide_jaspr/src/services/debug_session_service.dart';
+export 'package:lumide_jaspr/src/services/import_assist.dart';
+export 'package:lumide_jaspr/src/services/import_assist_service.dart';
 export 'package:lumide_jaspr/src/services/jaspr_service.dart';
 export 'package:lumide_jaspr/src/services/launch_source_resolver.dart';
 export 'package:lumide_jaspr/src/services/log_service.dart';
