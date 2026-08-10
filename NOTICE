@@ -1,0 +1,16 @@
+Jaspr for Lumide
+================
+
+This package provides Jaspr framework integration for the Lumide IDE under
+the MIT License.
+
+Upstream projects and authors:
+
+  - Jaspr (framework and CLI)
+    https://github.com/schultek/jaspr
+
+  - Jaspr editor tooling (serve/debug/daemon behavior and snippet prefixes)
+    https://github.com/schultek/jaspr
+    (modules/jaspr-code)
+
+See the LICENSE file for the full MIT text.

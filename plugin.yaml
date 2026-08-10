@@ -1,7 +1,9 @@
 id: lumide_jaspr
-name: 'Jaspr'
-description: 'Jaspr web framework support for Lumide IDE'
+name: Jaspr
+description: >
+  Jaspr web framework support for the Lumide IDE.
 entry_point: 'bin/main.dart'
+publisher: pryspace
 
 activation_events:
   - 'workspaceContains:pubspec.yaml'
@@ -21,6 +23,20 @@ configuration:
     default: 5000
     title: 'Log Entry Limit'
     description: 'Maximum number of log entries to keep in the Jaspr output channel.'
+  - key: jaspr.autoImportOnSave
+    type: boolean
+    default: true
+    title: 'Auto Import on Save'
+    description: >
+      When saving a .dart file in a Jaspr project, automatically add missing
+      imports for jaspr, jaspr/dom, jaspr/client, jaspr/server, jaspr_router, and related packages.
+  - key: jaspr.removeUnusedImportsOnSave
+    type: boolean
+    default: true
+    title: 'Remove Unused Imports on Save'
+    description: >
+      When auto-import on save is enabled, also remove unused managed Jaspr
+      imports (jaspr, dom, client, server, router, etc.) based on symbol heuristics.
 
 contributes:
   commands:
@@ -45,6 +61,9 @@ contributes:
     - id: jaspr.tools
       title: 'Jaspr: Tools Menu'
       category: 'Jaspr'
+    - id: jaspr.ensureImports
+      title: 'Jaspr: Ensure Imports'
+      category: 'Jaspr'
     - id: jaspr.context.clean
       title: 'Jaspr: Clean Here'
       category: 'Jaspr'
@@ -56,3 +75,7 @@ contributes:
       category: 'Jaspr'
   fileNesting:
     'pubspec.yaml': 'pubspec.lock, pubspec_overrides.yaml'
+  snippets:
+    - language: dart
+      path: snippets/dart.json
+
