@@ -15,6 +15,7 @@ class JasprPlugin extends LumidePlugin {
   late ServeDaemonService daemonService;
   late DebugSessionService debugSessionService;
   late RunService runService;
+  late ImportAssistService importAssistService;
 
   @override
   Future<void> onActivate(LumideContext context) async {
@@ -43,6 +44,11 @@ class JasprPlugin extends LumidePlugin {
       statusBarService: statusBarService,
       logService: logService,
     );
+    importAssistService = ImportAssistService(
+      context,
+      projectService,
+      logService,
+    );
 
     jasprService
       ..onServe = runService.serve
@@ -51,6 +57,7 @@ class JasprPlugin extends LumidePlugin {
 
     await runService.init();
     await statusBarService.init();
+    await importAssistService.init();
 
     unawaited(jasprService.checkSdk());
 
@@ -112,6 +119,11 @@ class JasprPlugin extends LumidePlugin {
         title: 'Jaspr: New Project Here',
         callback: ([args]) => jasprService.createForContext(args),
       ),
+      context.commands.registerCommand(
+        id: cmdJasprEnsureImports,
+        title: 'Jaspr: Ensure Imports',
+        callback: ([args]) => importAssistService.ensureImportsForActiveDocument(),
+      ),
     ]);
   }
 
@@ -152,6 +164,7 @@ class JasprPlugin extends LumidePlugin {
 
   @override
   Future<void> onDeactivate() async {
+    await importAssistService.dispose();
     await runService.dispose();
     await jasprService.dispose();
     await statusBarService.dispose();
