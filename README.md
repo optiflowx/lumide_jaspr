@@ -13,7 +13,7 @@ Project management, `jaspr daemon` serve/stop, and dual Server + Client debug at
 - **Launch configs** — Run/Debug provider with schema; imports existing `type: jaspr` launch configurations
 - **Status bar** — running/stopped state and Stop Jaspr control
 - **Dart snippets** — Jaspr component/HTML/event prefixes in `.dart` files
-- **Import assist** — on save (or via command), add missing and remove unused managed `jaspr` / `dom` / `client` / `server` / `jaspr_router` imports
+- **Import assist** — on save (or via command), add missing and remove unused managed `jaspr` / `dom` / `client` / `server` / `jaspr_router` imports (via shared `lumide_import_assist`)
 
 ## Requirements
 
@@ -34,6 +34,8 @@ Minimum CLI version: **0.23.0**
 3. Select this package directory (`packages/lumide_jaspr`)
 
 Or install from pub.dev when published.
+
+Recommended companion: load [`lumide_dart`](../lumide_dart) for language-level snippets (`dprint`, `ftest`, …) and pubspec file nesting. Plugins cannot depend on each other at runtime — install both if you want both surfaces.
 
 ## Commands
 
