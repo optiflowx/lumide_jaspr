@@ -1,3 +1,8 @@
+## 0.1.6
+
+- Use shared `lumide_import_assist` library for import sync (`JasprImportPack`)
+- Move pubspec file nesting to companion `lumide_dart` plugin (install alongside for nesting + language snippets)
+
 ## 0.1.5
 
 - Remove unused managed Jaspr imports on save / **Jaspr: Ensure Imports**
