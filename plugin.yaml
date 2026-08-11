@@ -73,8 +73,6 @@ contributes:
     - id: jaspr.context.create
       title: 'Jaspr: New Project Here'
       category: 'Jaspr'
-  fileNesting:
-    'pubspec.yaml': 'pubspec.lock, pubspec_overrides.yaml'
   snippets:
     - language: dart
       path: snippets/dart.json
