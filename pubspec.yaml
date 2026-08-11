@@ -3,7 +3,6 @@ description: "Jaspr web framework support for the Lumide IDE."
 version: 0.1.6
 homepage: https://lumide.dev
 repository: https://github.com/optiflowx/lumide_jaspr
-publish_to: https://pub.dev/packages/lumide_jaspr
 topics:
   - lumide-frameworks
   - lumide-plugin
